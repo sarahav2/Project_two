@@ -1,14 +1,21 @@
+// *********************************************************************************
+// This file offers a set of routes for sending users to the various handlebar views 
+// *********************************************************************************
+
+// Dependencies
+// =============================================================
 var express = require('express');
 var router = express.Router();
+
 // var sequelize = require('sequelize');
 var Mp = require('../models')['mp'];
 var User = require('../models')['user'];
 
-//index route
+//index view
 router.get('/', function (req, res){
-    //asks to signup or login
-    res.render('index');
-  });
+  //asks to signup or login
+  res.render('index');
+});
   
   //SIGN UP
   router.get('/signup', function(req, res){
@@ -54,3 +61,4 @@ router.get('/login', function(req, res){
     });
   
   });
+  module.exports = router;
