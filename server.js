@@ -34,9 +34,9 @@ app.use(express.static("public"));
 
 // Routes - (listed under controllers)
 // =============================================================
-var routes = require("./controllers/user_controller.js");
+// var routes = require("./controllers/user_controller.js");
 
-app.use(routes);
+// app.use(routes);
 
 // Routes for handlebar views
 // =============================================================
