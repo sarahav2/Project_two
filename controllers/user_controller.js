@@ -6,21 +6,22 @@
 // =============================================================
 var express = require('express');
 var router = express.Router();
+var app = express();
 
 // var sequelize = require('sequelize');
 var Mp = require('../models')['mp'];
 var User = require('../models')['user'];
 
-//index view
-router.get('/', function (req, res){
-  //asks to signup or login
-  res.render('index');
-});
+// //index view
+// router.get('/', function (req, res){
+//   //asks to signup or login
+//   res.render('about');
+// });
   
-  //SIGN UP
-  router.get('/signup', function(req, res){
-    res.render('signup');
-  });
+//   //SIGN UP
+//   router.get('/signup', function(req, res){
+//     res.render('signup');
+//   });
   
   router.post('/signup', function(req, res){
     //creates new user from valid form
@@ -61,8 +62,9 @@ router.get('/login', function(req, res){
     });
   
       //about view
-  router.get('/about', function(req, res){
-    res.render('about');
-  });
+  // app.get('/about', function(req, res){
+
+  //   res.render('about');
+  // });
   });
   module.exports = router;
