@@ -1,7 +1,7 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"><i class="material-icons">person_pin</i>Logo</a>
+      <a href="#" class="brand-logo"><i class="medium material-icons">person_pin</i>Find Me</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -44,14 +44,14 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgtbjikKiW6pDqq6k-niclL0wYB6Tz3Os&callback=initMap">
-</script>
+
 {{!-- Adding JavaScript and JQuery --}}
 <script>
   
   
-      $('#modal1').modal();
+      $(document).ready(function(){
+    $('.modal').modal();
+  });
 
       var map, infoWindow;
 function initMap() {
