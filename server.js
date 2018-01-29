@@ -55,6 +55,10 @@ app.get('/about', function(req, res){
   app.get('/signup', function(req, res){
     res.render('signup');
   });
+//SEARCH VIEW
+app.get('/search', function(req, res){
+    res.render('search');
+    });
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync().then(function() {
