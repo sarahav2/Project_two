@@ -12,10 +12,41 @@
   <form action="/" method="POST">
 <a class="waves-effect waves-light btn">Search</a> <a class="waves-effect waves-light btn">Report</a>
 </form>
-  <footer class="page-footer">
+
+<footer class="page-footer">
           <div class="footer-copyright">
             <div class="container">
             © 2018 Copyright BRB
             </div>
           </div>
         </footer>
+
+
+
+ <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Welcome</h4>
+      <p>Please Log in or Sign up</p>
+    </div>
+    <div class="modal-footer">
+      <a class="waves-effect waves-light btn-large"><i class="material-icons right">account_box</i>Log In</a>
+      <a class="waves-effect waves-light btn-large"><i class="material-icons right">create</i>Sign Up</a>
+    </div>
+  </div>
+  
+  <!-- Link in jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+{{!-- Adding JavaScript and JQuery --}}
+<script>
+  
+  
+      $('#modal1').modal();
+    
+  
+</script>
