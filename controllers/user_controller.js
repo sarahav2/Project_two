@@ -60,5 +60,9 @@ router.get('/login', function(req, res){
         }
     });
   
+      //about view
+  router.get('/about', function(req, res){
+    res.render('about');
+  });
   });
   module.exports = router;
