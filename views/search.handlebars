@@ -10,20 +10,21 @@
   </nav>
   <div class="container">
   <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
+    <div class="col s12">
+      <form id="search-form">
+        <div class="row">
+          <div class="input-field col s6">
           <input placeholder="Name" id="name" type="text" class="validate">
           <label for="first_name"></label>
+          </div>
         </div>
-      </div>
-       <div class="row">
+        <div class="row">
          <div class="input-field col s6">
-          <input placeholder="Age" id="Age" type="number" class="validate">
+          <input placeholder="Age" id="age" type="number" class="validate">
           <label for="Age"></label>
+          </div>
         </div>
-      </div>
-       <div class="row">
+         <div class="row">
          <div class="input-field col s6">
              <p>Sex</p>
              <form action="#">
@@ -35,8 +36,8 @@
             <input class="with-gap" name="group1" type="radio" id="Female" />
             <label for="female">Female</label>
             </p>
+          </div>
         </div>
-      </div>
       <div class="row">
       <div class="input-field col s6">
           <input placeholder="Last seen Location" id="loc" type="text" class="validate">
@@ -66,7 +67,11 @@
             </div>
         </div>
       </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+       <i class="material-icons right">send</i>
+        </button>
     </form>
+    </div>
   </div>
 </div>
 <footer class="page-footer">
@@ -77,11 +82,14 @@
           </div>
         </footer>
 
+ 
 
   <!-- Link in jQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+ <!-- Link to javascript file to runsearch -->
+  <script src="public/js/userSearch.js"></script>
 
   <script>
         $(document).ready(function() {
