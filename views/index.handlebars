@@ -27,7 +27,7 @@
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"></a><i class="material-icons">menu</i></a>
-
+  {{!-- <a href="#" data-activates="slide-out" class="button-collapse">Side nav demo</a> --}}
 {{!-- Google Map   --}}
 <div id="map"></div>
 
@@ -40,6 +40,7 @@
           </div>
         </footer>
 
+   
 
  <!-- Link in jQuery -->
  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -49,12 +50,15 @@
 {{!-- Adding JavaScript and JQuery --}}
  <script>
 
+  
+
       var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
     zoom: 6
   });
+
   infoWindow = new google.maps.InfoWindow;
 
   // Try HTML5 geolocation.
@@ -75,7 +79,7 @@ function initMap() {
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-  }
+  
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -85,13 +89,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+}
 
- $(document).ready(function(){
-   $('.button-collapse').sideNav({
-      closeOnClick: true
-    }
-   );
- });    
 
+   $(document).ready(function(){
+   $('#slide-out').sideNav();  
+
+   });
 </script>
 
