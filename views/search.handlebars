@@ -1,0 +1,90 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons">person_pin</i>Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/resources">Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Name" id="name" type="text" class="validate">
+          <label for="first_name"></label>
+        </div>
+      </div>
+       <div class="row">
+         <div class="input-field col s6">
+          <input placeholder="Age" id="Age" type="number" class="validate">
+          <label for="Age"></label>
+        </div>
+      </div>
+       <div class="row">
+         <div class="input-field col s6">
+             <p>Sex</p>
+             <form action="#">
+            <p>
+            <input class="with-gap" name="group1" type="radio" id="Male" />
+            <label for="male">Male</label>
+            </p>
+            <p>
+            <input class="with-gap" name="group1" type="radio" id="Female" />
+            <label for="female">Female</label>
+            </p>
+        </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s6">
+          <input placeholder="Last seen Location" id="loc" type="text" class="validate">
+          <label for="location"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled value="Florida" id="disabled" type="text" class="validate">
+          <label for="disabled">Florida</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+            <div class="input-field col s12">
+        <select>
+        <option value="" disabled selected>Race</option>
+        <option value="1">Asian or Pacific Islander 1</option>
+        <option value="2">Black/ African American</option>
+        <option value="3">Native American</option>
+        <option value="4">White</option>
+        <option value="5">Other</option>
+        <option value="6">Unsure</option>
+        </select>
+        <label>Materialize Select</label>
+            </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<footer class="page-footer">
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright BRB
+            </div>
+          </div>
+        </footer>
+
+
+  <!-- Link in jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script>
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>

@@ -7,6 +7,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var db = require("./models/index");
+var exphbs = require("express-handlebars");
 
 // Sets up the Express App
 // =============================================================
@@ -23,8 +24,6 @@ app.use(bodyParser.json());
 
 // Sets up the handlebars
 //=============================================================
-var exphbs = require("express-handlebars");
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
@@ -32,29 +31,13 @@ app.set("view engine", "handlebars");
 //=============================================================
 app.use(express.static("public"));
 
-// Routes - (listed under controllers)
+// Routes for page view and api use
 // =============================================================
-// var routes = require("./controllers/user_controller.js");
-
+routes = require("./routes/htmlRoutes")(app);
+// routes = require("./controllers/apiRoutes")(app);
 // app.use(routes);
 
-// Routes for handlebar views
-// =============================================================
 
-//index view
-app.get('/', function (req, res){
-    //asks to signup or login
-    res.render('index');
-  });
-  //About page
-app.get('/about', function(req, res){
-
-    res.render('about');
-  });
-  //SIGN UP
-  app.get('/signup', function(req, res){
-    res.render('signup');
-  });
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync().then(function() {
