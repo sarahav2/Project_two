@@ -3,19 +3,22 @@ $(document).ready(function() {
   
 
   console.log("looking for something to show up");
+
 // Adding event listeners from the form to create a new object
-  $(document).on("submit", "#search-form", runsearch);
-    
-  function runsearch(event){
-    var nameSearch = $("#name");
-  var ageSearch = $("#age");
-  var locSearch = $("loc");
-  console.log("Looking for name" + nameSearch);
-  };
+
+
+$(document).on("click", "#done", runsearch);
+
+
+  function runsearch(){
+    var nameSearch = "testing the name kim";
+    var nameTest = $("#mpName");
+  console.log("I have been clicked");
+      console.log("This is the name entered: " + nameSearch);
+      console.log("This is the name entered: " + nameTest);
+      location.reload();
+    }
 });
-
-
-
 
   // function runsearch(event) {
   //   mp.findall({
