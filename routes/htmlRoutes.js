@@ -8,4 +8,5 @@ module.exports = function(app) {
   app.get("/signup", pageController.renderSignup);
 
   app.get("/search", pageController.renderSearch);
+
 };
