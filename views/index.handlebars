@@ -1,6 +1,6 @@
 
   <nav>
-    <div class="nav-wrapper">
+  <div class="nav-wrapper">
       <a href="#" class="brand-logo"><i class="medium material-icons">person_pin</i>Find Me</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
@@ -9,12 +9,29 @@
       </ul>
     </div>
   </nav>
-  <form action="/" method="POST">
-<a class="waves-effect waves-light btn" href="/search">Search</a> <a class="waves-effect waves-light btn">Report</a> <a class="waves-effect waves-light btn" href="/signup">Sign Up</a> 
-</form>
-
+{{!-- Pull out Side bar --}}
+  <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="/search"><i class="material-icons">cloud</i>Search for Missing Person</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>How to Report</a></li>
+    <li><a href="/signup"><i class="material-icons">cloud</i>Sign Up!</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"></a><i class="material-icons">menu</i></a>
+  {{!-- <a href="#" data-activates="slide-out" class="button-collapse">Side nav demo</a> --}}
+{{!-- Google Map   --}}
 <div id="map"></div>
 
+{{!-- Page footer --}}
 <footer class="page-footer">
           <div class="footer-copyright">
             <div class="container">
@@ -23,35 +40,17 @@
           </div>
         </footer>
 
+   
 
-
- <!-- Modal Trigger -->
-  {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a> --}}
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Welcome</h4>
-      <p>Please Log in or Sign up</p>
-    </div>
-    <div class="modal-footer">
-      <a class="waves-effect waves-light btn-large"><i class="material-icons right">account_box</i>Log In</a>
-      <a class="waves-effect waves-light btn-large"><i class="material-icons right">create</i>Sign Up</a>
-    </div>
-  </div>
-  
-  <!-- Link in jQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+ <!-- Link in jQuery -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-
 {{!-- Adding JavaScript and JQuery --}}
-<script>
+ <script>
+
   
-  
-  $(document).ready(function(){
-    $('#modal1').modal("open");
-  });
 
       var map, infoWindow;
 function initMap() {
@@ -59,6 +58,7 @@ function initMap() {
     center: {lat: -34.397, lng: 150.644},
     zoom: 6
   });
+
   infoWindow = new google.maps.InfoWindow;
 
   // Try HTML5 geolocation.
@@ -79,7 +79,7 @@ function initMap() {
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-  }
+  
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -89,6 +89,12 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-    
-  
+}
+
+
+   $(document).ready(function(){
+   $('#slide-out').sideNav();  
+
+   });
 </script>
+
