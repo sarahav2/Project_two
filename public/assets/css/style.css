@@ -1,8 +1,8 @@
-body { */
-  background-image: url("http://s.newsweek.com/sites/www.newsweek.com/files/styles/full/public/2017/02/17/planet-earth.jpg");
+body { 
+  background-image: url("https://wallpaperstock.net/wallpapers/thumbs1/53431hd.png");
   background-repeat: no-repeat;
-  background-position: right top;
-/* /* }; */
+  background-position: center;
+}
 
 #map {
     height: 40%;
