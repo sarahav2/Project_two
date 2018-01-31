@@ -24,8 +24,12 @@
     <br>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Resources</a></li>
+    <li><a class="subheader">Resources</a></li>
+    <li><a class="waves-effect" href="https://www.fbi.gov/wanted/kidnap">FBI</a></li>
+    <li><a class="waves-effect" href="http://www.cityoforlando.net/police/category/missing-persons/">City Of Orlando</a></li>
+    <li><a class="waves-effect" href="https://www.ocso.com/Public-Interest/Missing-Persons">Orange County Sheriff's Office</a></li>
+    <li><a class="waves-effect" href="https://www.findthemissing.org/en">NamUs</a></li>
+ 
   </ul>
   {{!-- <a href="#" data-activates="slide-out" class="button-collapse"></a><i class="material-icons">menu</i></a> --}}
   <a href="#" data-activates="slide-out" class="btn button-collapse"><i class="large material-icons">format_list_bulleted</i></a>
@@ -101,5 +105,28 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
    $('.button-collapse').sideNav();  
 
    });
+</script>
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+  // auth2 is initialized with gapi.auth2.init() and a user is signed in.
+
+if (auth2.isSignedIn.get()) {
+  var profile = auth2.currentUser.get().getBasicProfile();
+  console.log('ID: ' + profile.getId());
+  console.log('Full Name: ' + profile.getName());
+  console.log('Given Name: ' + profile.getGivenName());
+  console.log('Family Name: ' + profile.getFamilyName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+}
+
 </script>
 
