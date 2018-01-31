@@ -9,4 +9,5 @@ module.exports = function(app) {
 
   app.get("/search", pageController.renderSearch);
 
+  app.get("/results", pageController.renderResults);
 };
