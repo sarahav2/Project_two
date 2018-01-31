@@ -1,19 +1,30 @@
+/* body { */
+  /* background-image: url("https://wallpaperscraft.com/image/railroad_grass_trees_101258_602x339.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: right top; */
+/* }; */
+
+/* body { 
+  background-image: url("http://s.newsweek.com/sites/www.newsweek.com/files/styles/full/public/2017/02/17/planet-earth.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+ }; */
 
 #map {
-    height: 50%;
-    width: 50%;
-    position: center;
+    height: 40%;
+    width: 40%;
+    
   }
   html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 30;
+    padding: 50;
   }
 
-  .footer {
-    position: fixed;
+  /* .footer {
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-  }
+  } */
