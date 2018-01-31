@@ -1,6 +1,4 @@
-var db = require("../models");
-
-module.exports =  {
+module.exports = {
 
   renderHome: function (req, res){
       //asks to signup or login
@@ -19,7 +17,6 @@ module.exports =  {
       res.render('search');
       },
   renderResults: function(req, res){
-    res.render('results') 
-
-  }
+    res.render('results', {MisPer:dbMP})
+  }    
 };
