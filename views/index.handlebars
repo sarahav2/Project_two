@@ -12,15 +12,16 @@
   <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
-        <img src="./assets/images/cardboard_robot.jpg" style="width:300px;height:250px;">
+        <img src="images/office.jpg">
       </div>
-      <a href="#!user"><img class="circle" src="./assets/images/person_face.jpg"></a>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
       <a href="#!name"><span class="white-text name">John Doe</span></a>
       <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
     </div></li>
     <li><a href="/search"><i class="material-icons">cloud</i>Search for Missing Person</a></li>
     <li><a href="#!"><i class="material-icons">cloud</i>How to Report</a></li>
     {{!-- <li><a href="/signup"><i class="material-icons">cloud</i>Sign Up!</a></li> --}}
+    <br>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Resources</a></li>
@@ -51,6 +52,8 @@
    {{!-- specify app client ID --}}
    <meta name="google-signin-client_id" content="808214130997-fpb1hbehkqloerfab3gumlp120dvsoe3.apps.googleusercontent.com">
 
+ <!-- Link in jQuery -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
@@ -103,15 +106,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
    $('.button-collapse').sideNav();  
 
    });
-
-
-
-
-
-
+</script>
 
 <a href="#" onclick="signOut();">Sign out</a>
-
+<script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
