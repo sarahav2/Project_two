@@ -1,0 +1,48 @@
+<style>
+    
+</style>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons">person_pin</i>Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/resources">Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+<div class="row">
+    <div class="col s12">
+<h3>The following names below meet your search criteria</h3>
+    </div>
+<div class="row">
+    <div class="col s12">
+<table>
+    <tr>
+<thead>
+    <th>Name</th>
+    <th>Age</th> 
+    <th>Race</th>
+    <th>Sex</th>
+    <th>Date last Seen</th> 
+    <th>Location</th>
+</thead>
+    </tr>
+<tbody>
+    <tr>
+        {{#each mp}}
+    <td>{{this.NAME}}</td>
+    <td>{{this.AGE}}</td>
+    <td>{{this.RACE}}</td>
+    <td>{{this.SEX}}</td>
+    <td>{{this.DATE_SEEN}}</td>
+    <td>{{this.LOC}}</td>
+    </tr>
+  {{/each}}
+</tbody>
+</table>
+    </div>
+</div>
+</div>
+  
