@@ -20,13 +20,15 @@
     </div></li>
     <li><a href="/search"><i class="material-icons">cloud</i>Search for Missing Person</a></li>
     <li><a href="#!"><i class="material-icons">cloud</i>How to Report</a></li>
-    <li><a href="/signup"><i class="material-icons">cloud</i>Sign Up!</a></li>
+    {{!-- <li><a href="/signup"><i class="material-icons">cloud</i>Sign Up!</a></li> --}}
+    <br>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    <li><a class="waves-effect" href="#!">Resources</a></li>
   </ul>
   {{!-- <a href="#" data-activates="slide-out" class="button-collapse"></a><i class="material-icons">menu</i></a> --}}
-  <a href="#" data-activates="slide-out" class="btn button-collapse">MORE</a>
+  <a href="#" data-activates="slide-out" class="btn button-collapse"><i class="large material-icons">format_list_bulleted</i></a>
 {{!-- Google Map   --}}
 
 <div id="map"></div>
@@ -40,7 +42,10 @@
           </div>
         </footer> --}}
 
-   
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+   {{!-- specify app client ID --}}
+   <meta name="google-signin-client_id" content="808214130997-fpb1hbehkqloerfab3gumlp120dvsoe3.apps.googleusercontent.com">
 
  <!-- Link in jQuery -->
  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
