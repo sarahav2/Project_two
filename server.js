@@ -1,5 +1,3 @@
-// import { Server } from "net";
-
 // *********************************************************************************
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *********************************************************************************
@@ -47,5 +45,3 @@ db.sequelize.sync().then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
-
-
