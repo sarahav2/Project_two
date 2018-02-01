@@ -10,24 +10,25 @@ This app has been deployed to Heroku and can be used by following the link below
 
 [Find Me](https://github.com/sarahav2/Project_two)
 
+https://infinite-peak-15131.herokuapp.com/
+
 ## Screenshots of this Project
 
 ![Find Me Splash Page](https:// "Find Me Splash Page")
 
 ## API
 
-????
+Google API
 
 ## Database
 
-* Tables
-	* Table A
+* Missing_Person
+	* MP
 		* Columns
 			* Rows
 	
-	* Table B
-        * Columns
-			* Rows
+	* User
+        		* Rows
 
 ## Technologies
 
