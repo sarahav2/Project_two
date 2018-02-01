@@ -15,13 +15,11 @@ module.exports = function(app) {
     console.log("Parameter name: "+ req.params.name)
     // findAll returns all entries for a table when used with no options
         db.MP.findAll({
-            where:{
-                name: req.params.name
+            where: {
+                NAME: req.params.name
             }
-        }).then(function(dbMP) {
-      // We have access to the todos as an argument inside of the callback function
-        res.json(dbMP);
-        pageController.renderResults(dbMP);
+        }).then(function(data) {
+        res.json(data);
     });
   })
 };

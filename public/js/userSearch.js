@@ -10,27 +10,36 @@ $(document).ready(function() {
     event.preventDefault();
     console.log("Search has been clicked");
    //Get the data form the form
-    var nameTest = {
-      name: $("#mpName").val().trim()
+    var searchResults = {
+      name: $("#mpName").val().trim(),
     };
-    let name = nameTest.name;
+    let name = searchResults.name;
+
       
-      console.log("This is the name entered: " + nameTest.name);
+      console.log("This is the name entered: " + searchResults.name);
         //request the data at the route
     $.get("api/results/" + name, function(data){
       //check to see if we have the data
       if(data){
-        console.log(data);
-        
-      }
-    })   
+        console.log(data["0"].NAME);
+        var mpResult = data["0"];
+        addTableData(mpResult);
+      };
+      
+      function addTableData(mpResult){
+        $('#data-mp').append(mpResult.MP_NUM);
+        $('#data-name').append(mpResult.NAME);
+        $('#data-sex').append(mpResult.SEX);
+        $('#data-age').append(mpResult.AGE);
+        $('#data-race').append(mpResult.RACE);
+        $('#data-date').append(mpResult.DATE_SEEN);
+        $('#data-loc').append(mpResult.LOC);
+        console.log("This should be the name: " + mpResult.NAME);
+      };
+    });
+       
   });
 
     // location.reload();
-  // function runsearch(event) {
-  //   mp.findall({
-  //     where: {
-  //       age: ageSearch
-      // }
-    // });
+  
 });

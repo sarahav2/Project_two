@@ -9,14 +9,11 @@ module.exports = {
       res.render('about');
     },
     //SIGN UP
-    renderSignup: function(req, res){
+    renderSignup: function (req, res){
       res.render('signup');
     },
   //SEARCH VIEW
-  renderSearch: function(req, res){
+  renderSearch: function (req, res){
       res.render('search');
-      },
-  renderResults: function(req, res){
-    res.render('results', {MisPer:dbMP})
-  }    
+      }
 };
